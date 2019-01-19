@@ -18,13 +18,13 @@ Using this repository, you will be able to install and use InstaPy with only ver
 1. ... (TODO - best way to start the quickstart file)
 ---
 
-### Already used InstaPy before `pip install instapy`?
+#### Already used InstaPy before `pip install instapy`?
 If you've used InstaPy before the update to PyPi that allows installing with `pip install instapy`, you have to move your database and log files into the new workspace directory.   
 [**Check out this very short guide on what to do!**]()
 
 ---
 
-### Encountering an issue while installing?
+#### Encountering an issue while installing?
 If you should encounter any problem with the installation, please use the main repository [InstaPy](https://github.com/timgrossmann/InstaPy) to report the issue instead of this repository.
 
 
