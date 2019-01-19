@@ -2,5 +2,8 @@
 
 It's really easy, just download one of the template files to your system and edit the username and password and adjust the lists to fit your needs. 
 
-WARNING; some of the follow/liking limits may not be best to use with Instagram's ever changing limits.    
+#### ⚠️ Caution 
+Some of the follow/liking limits may not be best to use with Instagram's ever changing limits.    
 **Start small and play around with these.**
+
+###### Have fun & stay responsible
