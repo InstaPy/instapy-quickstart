@@ -27,8 +27,8 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
-insta_username = ''
-insta_password = ''
+insta_username = ''  # <- enter username here
+insta_password = ''  # <- enter password here
 
 # get an InstaPy session!
 # set headless_browser=True to run InstaPy in the background
