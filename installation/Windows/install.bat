@@ -14,7 +14,7 @@ if ERRORLEVEL 1 GOTO :errorNoPip
 if not ERRORLEVEL 1 GOTO :pipInstalled
 
 :errorNoPip
-echo Error^: Pip not installed, installing now
+echo Error: Pip not installed, installing now
 REM[The following two lines download and install pip.]
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
