@@ -19,7 +19,10 @@ Using this repository, you will be able to install and use InstaPy with only ver
 
 
 #### Basic quickstart file 
+To get started quickly we've prepared a basic quickstart file in which you only have to edit the username and password, inside the single quotes, to make sure you're all set up.
+After testing your installtion by starting InstaPy once, you can go in and use the mentioned [Udemy course]() and the [documentation](https://github.com/timgrossmann/InstaPy) to configure your personal bot.
 
+The basic quickstart file looks like this:
 ```python
 """ Quickstart script for InstaPy usage """
 # imports
