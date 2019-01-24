@@ -3,16 +3,10 @@
 echo starting instapy with quickstart
 echo ================================
 
-cd C:\Users\%USERNAME%\instapy-quickstart
-if ERRORLEVEL 1 GOTO :fileNotFound
-if not ERRORLEVEL 1 GOTO :run
+REM[find the current directory and removes "/run" from the end to get the instapy-quickstart directory"]
+set CD=%CD:~0,-4%
 
-:fileNotFound
-echo the quickstart.py file is not installed in the correct directory. visit https://github.com/InstaPy/instapy-quickstart to find out how to install it correctly.
-pause
-GOTO :EOF
-
-:run
-echo quickstart.py found. starting now.
+cd %CD%
 python quickstart.py
+
 pause
