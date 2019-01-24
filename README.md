@@ -4,7 +4,7 @@
 
 # Instapy Quickstart
 If you want to get a sophisticated and full introduction to InstaPy, we recommend taking the video course   
-**[Full offical guide to InstaPy on Udemy]()**
+**[Full official guide to InstaPy on Udemy]()**
 
 ### Installation
 Using this repository, you will be able to install and use InstaPy with only very few steps.
