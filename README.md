@@ -16,6 +16,41 @@ Using this repository, you will be able to install and use InstaPy with only ver
 1. Once successfully installed you can edit the quickstart file or use any of the template files from the quickstart_templates folder
 1. Insert your username and password and modify anything you want. Make use of the **[comprehensive documentation](https://github.com/timgrossmann/InstaPy)**.
 1. ... (TODO - best way to start the quickstart file)
+
+
+#### Basic quickstart file 
+
+```python
+""" Quickstart script for InstaPy usage """
+# imports
+from instapy import InstaPy
+from instapy import smart_run
+
+# login credentials
+insta_username = ''
+insta_password = ''
+
+# get an InstaPy session!
+# set headless_browser=True to run InstaPy in the background
+session = InstaPy(username=insta_username,
+                  password=insta_password,
+                  headless_browser=False)
+
+with smart_run(session):
+    """ Activity flow """
+    # general settings
+    session.set_relationship_bounds(enabled=True,
+                                    delimit_by_numbers=True,
+                                    max_followers=4590,
+                                    min_followers=45,
+                                    min_following=77)
+
+    session.set_dont_include(["friend1", "friend2", "friend3"])
+    session.set_dont_like(["pizza", "#store"])
+
+    # activity
+    session.like_by_tags(["natgeo"], amount=10)
+```
 ---
 
 #### Already used InstaPy before `pip install instapy`?
