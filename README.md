@@ -55,6 +55,9 @@ with smart_run(session):
     # activity
     session.like_by_tags(["natgeo"], amount=10)
 ```
+
+> When adding lines to the script, make sure to use a code editor which takes care of the indentation. Otherwise you will get an error upon execution.
+
 ---
 
 #### Already used InstaPy before `pip install instapy`?
