@@ -3,8 +3,6 @@
 <img src="https://i.imgur.com/sJzfZsL.jpg" width="150" align="right">
 
 # Instapy Quickstart
-If you want to get a sophisticated and full introduction to InstaPy, we recommend taking the video course   
-**[Full official guide to InstaPy on Udemy]()**
 
 ### Installation
 Using this repository, you will be able to install and use InstaPy with only very few steps.
@@ -21,7 +19,7 @@ Using this repository, you will be able to install and use InstaPy with only ver
 
 #### Basic quickstart file 
 To get started quickly we've prepared a basic quickstart file in which you only have to edit the username and password, inside the single quotes, to make sure you're all set up.
-After testing your installtion by starting InstaPy once, you can go in and use the mentioned [Udemy course]() and the [documentation](https://github.com/timgrossmann/InstaPy) to configure your personal bot.
+After testing your installtion by starting InstaPy once, you can go in and use the [documentation](https://github.com/timgrossmann/InstaPy) to configure your personal bot.
 
 The basic quickstart file looks like this:
 ```python
@@ -62,7 +60,7 @@ with smart_run(session):
 
 #### Already used InstaPy before `pip install instapy`?
 If you've used InstaPy before the update to PyPi that allows installing with `pip install instapy`, you have to move your database and log files into the new workspace directory.   
-[**Check out this very short guide on what to do!**]()
+[**Check out this very short guide on what to do!**](https://github.com/timgrossmann/InstaPy/migrating-your-data-to-the-workspace-folder)
 
 ---
 
