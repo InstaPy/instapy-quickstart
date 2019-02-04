@@ -1,5 +1,3 @@
-> This repository is non-functional at the moment. Once this note has been removed, you can download it and use it to quickly get InstaPy working on your system. Please have a little bit more patience.
-
 <img src="https://i.imgur.com/sJzfZsL.jpg" width="150" align="right">
 
 # Instapy Quickstart
