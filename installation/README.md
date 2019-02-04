@@ -1,3 +1,5 @@
+> **Please Note**: The scripts for Linux and RaspberryPi still have to be added!
+
 ### Installation
 
 Installing InstaPy is really simple. Just choose the folder of the system you are using and double click the installation file.   
