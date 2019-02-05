@@ -58,7 +58,7 @@ with smart_run(session):
 
 #### Already used InstaPy before `pip install instapy`?
 If you've used InstaPy before the update to PyPi that allows installing with `pip install instapy`, you have to move your database and log files into the new workspace directory.   
-[**Check out this very short guide on what to do!**](https://github.com/timgrossmann/InstaPy/migrating-your-data-to-the-workspace-folder)
+[**Check out this very short guide on what to do!**](https://github.com/timgrossmann/InstaPy#migrating-your-data-to-the-workspace-folder)
 
 ---
 
