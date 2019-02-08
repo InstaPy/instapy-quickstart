@@ -30,4 +30,4 @@ echo "Installing InstaPy..."
 sudo pip install instapy --ignore-installed
 pushd -0
 echo "Setup is completed."
-read -n1 -r -p "Press any key to continue..." key
+read -p "Press any key to continue..." key
