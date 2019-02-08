@@ -1,3 +1,5 @@
+# Simple installation script for MacOS
+
 echo "Unix InstaPy Setup"
 echo =============================================================================================
 arch=$(getconf LONG_BIT)
