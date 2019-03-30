@@ -73,3 +73,8 @@ with smart_run(session):
     session.unfollow_users(amount=500, InstapyFollowed=(True, "all"),
                            style="FIFO", unfollow_after=24 * 60 * 60,
                            sleep_delay=601)
+
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()
+

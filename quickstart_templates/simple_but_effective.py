@@ -46,3 +46,7 @@ with smart_run(session):
     session.follow_user_followers(['chrisburkard', 'danielkordan'],
                                   amount=ammount_number, randomize=False,
                                   interact=True, sleep_delay=240)
+
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()

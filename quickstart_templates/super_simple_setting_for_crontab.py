@@ -31,3 +31,7 @@ with smart_run(session):
         ['xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx',
          'xxx', 'xxx', 'xxx'],
         amount=8, skip_top_posts=True)
+
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()

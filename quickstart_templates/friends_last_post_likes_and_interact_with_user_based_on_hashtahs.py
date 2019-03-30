@@ -201,3 +201,7 @@ with smart_run(bot):
                            style="FIFO",
                            unfollow_after=168 * 60 * 60,
                            sleep_delay=600)
+
+    """ Joining Engagement Pods...
+    """
+    bot.join_pods()

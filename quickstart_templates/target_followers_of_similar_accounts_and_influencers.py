@@ -118,6 +118,10 @@ with smart_run(session):
                            InstapyFollowed=(True, "all"), style="FIFO",
                            unfollow_after=168 * 60 * 60, sleep_delay=600)
 
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()
+
 """
 Have fun while optimizing for your purposes, Nuzzo
 """

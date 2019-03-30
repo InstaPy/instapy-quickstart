@@ -77,6 +77,10 @@ with smart_run(session):
                            style="FIFO", unfollow_after=None,
                            sleep_delay=600)
 
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()
+
 """
 EXTRA NOTES:
 
