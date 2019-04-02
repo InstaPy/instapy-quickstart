@@ -20,3 +20,7 @@ with smart_run(session):
   
   # activity		
   session.like_by_tags(["natgeo"], amount=10)
+
+  # Joining Engagement Pods
+  session.join_pods()
+

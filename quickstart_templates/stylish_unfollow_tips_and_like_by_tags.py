@@ -104,6 +104,10 @@ with smart_run(session):
 
     session.like_by_tags(['tag1', 'tag2', 'tag3', 'tag4'], amount=300)
 
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()
+
 """
 -- REVIEWS --
 

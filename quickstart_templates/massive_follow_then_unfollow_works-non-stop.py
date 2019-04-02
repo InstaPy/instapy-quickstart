@@ -38,3 +38,7 @@ with smart_run(session):
     # session.unfollow_users(amount=7500, nonFollowers=True, style="RANDOM",
     # unfollow_after=42*60*60, sleep_delay=3)
     session.like_by_tags(['???'], amount=8000)
+
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()

@@ -41,6 +41,10 @@ with smart_run(session):
     # activity
     session.interact_user_followers([], amount=340)
 
+    """ Joining Engagement Pods...
+    """
+    session.join_pods()
+
 """
 -- REVIEWS --
 
