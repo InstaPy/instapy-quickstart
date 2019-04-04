@@ -1,4 +1,4 @@
-# Simple installation script for MacOS
+# Simple installation script for Linux
 
 echo "Unix InstaPy Setup"
 echo =============================================================================================
