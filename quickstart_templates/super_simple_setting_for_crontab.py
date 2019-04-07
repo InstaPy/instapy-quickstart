@@ -24,6 +24,11 @@ with smart_run(session):
                                     min_following=77)
     session.set_do_comment(True, percentage=50)
     session.set_comments(['aMazing!', 'So cool!!', 'Nice!', 'wow looks nice!',
+                        'Just incredible :open_mouth:',
+                        'What camera did you use @{}?',
+                        'Love your posts @{}',
+                        'Looks awesome @{}',
+                        'Getting inspired by you @{}',
                           'this is awesome!'])
 
     # activity

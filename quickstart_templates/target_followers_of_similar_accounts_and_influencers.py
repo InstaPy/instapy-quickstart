@@ -42,7 +42,16 @@ targets = ['user1', 'user2', 'user3']
 target_business_categories = ['category1', 'category2', 'category3']
 
 # COMMENT data
-comments = ['comment1', 'comment2', 'comment3']
+comments = ['Nice shot! @{}',
+        'I love your profile! @{}',
+        'Your feed is an inspiration :thumbsup:',
+        'Just incredible :open_mouth:',
+        'What camera did you use @{}?',
+        'Love your posts @{}',
+        'Looks awesome @{}',
+        'Getting inspired by you @{}',
+        ':raised_hands: Yes!',
+        'I can feel your passion @{} :muscle:']
 
 # get a session!
 session = InstaPy(username=insta_username,

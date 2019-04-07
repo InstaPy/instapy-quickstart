@@ -43,7 +43,15 @@ with smart_run(session):
     session.set_blacklist(enabled=True, campaign='blacklist')
     session.set_do_like(enabled=True, percentage=100)
     session.set_do_comment(enabled=True, percentage=100)
-    session.set_comments([':thumbsup:', ':raising_hands:', 'comment3'],
+    session.set_comments([':thumbsup:', ':raising_hands:'
+		        'you r such a special diamond :thumbsup:',
+		        'Just incredible :open_mouth:',
+		        'YOU R THE BO$$ @{}?',
+		        'Love your posts @{}',
+		        'Looks awesome @{}',
+		        'Getting inspired by you @{}',
+		        ':raised_hands: Yes!',
+		        'I keep waiting for your posts @{} :thumbsup: :muscle:'],
                          media='Photo')
     session.set_comments(
         ['comment4', ':smiling_face_with_sunglasses: :thumbsup:', ':comment6'],

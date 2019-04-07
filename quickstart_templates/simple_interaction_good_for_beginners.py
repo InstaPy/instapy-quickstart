@@ -17,6 +17,17 @@ from instapy import smart_run
 # get a session!
 session = InstaPy(username='', password='')
 
+photo_comments = ['Nice shot! @{}',
+    'I love your profile! @{}',
+    'Your feed is an inspiration :thumbsup:',
+    'Just incredible :open_mouth:',
+    'What camera did you use @{}?',
+    'Love your posts @{}',
+    'Looks awesome @{}',
+    'Getting inspired by you @{}',
+    ':raised_hands: Yes!',
+    'I can feel your passion @{} :muscle:']
+
 # let's go! :>
 with smart_run(session):
     # settings
@@ -34,7 +45,7 @@ with smart_run(session):
     session.set_ignore_users([])
     session.set_do_comment(enabled=True, percentage=35)
     session.set_do_follow(enabled=True, percentage=25, times=1)
-    session.set_comments([])
+    session.set_comments(photo_comments)
     session.set_ignore_if_contains([])
     session.set_action_delays(enabled=True, like=40)
 

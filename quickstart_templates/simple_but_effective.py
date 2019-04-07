@@ -33,7 +33,11 @@ with smart_run(session):
     session.set_do_comment(enabled=True, percentage=5)
     session.set_comments(
         ['Nice shot! @{}', 'I love your profile! @{}', '@{} Love it!',
-         '@{} :heart::heart:',
+        '@{} :heart::heart:',
+        'Love your posts @{}',
+        'Looks awesome @{}',
+        'Getting inspired by you @{}',
+        ':raised_hands: Yes!',
          '@{}:revolving_hearts::revolving_hearts:', '@{}:fire::fire::fire:'],
         media='Photo')
 

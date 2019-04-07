@@ -73,7 +73,16 @@ hashtags = data['hashtags']
 Generating 5 comments built with random selection and amount of emojis from 
 characters
 """
-comments = []
+comments = ['Nice shot! @{}',
+        'I love your profile! @{}',
+        'Wow :thumbsup:',
+        'Just incredible :open_mouth:',
+        'Amazing @{}?',
+        'Love your posts @{}',
+        'Looks awesome @{}',
+        'Getting inspired by you @{}',
+        ':raised_hands: Yes!',
+        'I can feel your passion @{} :muscle:']
 characters = [u'😮', u'🌱', u'🍕', u'🚀', u'💬', u'💅', u'🦑', u'🌻', u'⚡️',
               u'🌈', u'🎉', u'😻']
 for comment in range(5):

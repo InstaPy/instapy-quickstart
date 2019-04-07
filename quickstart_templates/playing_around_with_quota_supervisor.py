@@ -30,7 +30,14 @@ with smart_run(session):
                                     min_followers=75,
                                     min_following=75)
     session.set_do_comment(False, percentage=10)
-    session.set_comments(['aMEIzing!', 'So much fun!!', 'Nicey!'])
+    session.set_comments(['aMEIzing!', 'So much fun!!', 'Nicey!',
+			'Just incredible :open_mouth:',
+			'What camera did you use @{}?',
+			'Love your posts @{}',
+			'Looks awesome @{}',
+			'Getting inspired by you @{}',
+			':raised_hands: Yes!',
+			'I can feel your passion @{} :muscle:'])
     session.set_use_clarifai(enabled=True, api_key='')
     session.clarifai_check_img_for(
         ['nsfw', 'gay', 'hijab', 'niqab', 'religion', 'shirtless', 'fitness',
@@ -58,7 +65,15 @@ with smart_run(session):
                               media='Photo')
     session.set_do_follow(enabled=True, percentage=70)
     session.set_do_like(enabled=True, percentage=70)
-    session.set_comments([u"👍"])
+    session.set_comments([u"👍" , 'Nice shot! @{}',
+	    'I love your profile! @{}',
+	    'Your feed is an inspiration :thumbsup:',
+	    'Just incredible :open_mouth:',
+	    'What camera did you use @{}?',
+	    'Love your posts @{}',
+	    'Looks awesome @{}',
+	    'Getting inspired by you @{}',
+	    ':raised_hands: Yes!'])
     session.set_do_comment(enabled=True, percentage=30)
     session.interact_user_followers([''], amount=random.randint(1, 10),
                                     randomize=True)

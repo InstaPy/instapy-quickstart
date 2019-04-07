@@ -46,7 +46,7 @@ with smart_run(session):
     session.set_do_follow(enabled=True, percentage=20, times=2)
     session.set_comments(['Amazing!', 'Awesome!!', 'Cool!', 'Good one!',
                           'Really good one', 'Love this!', 'Like it!',
-                          'Beautiful!', 'Great!'])
+                          'Beautiful!', 'Great!', 'Nice one'])
     session.set_sleep_reduce(200)
 
     """ Get the list of non-followers
