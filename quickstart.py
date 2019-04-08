@@ -1,4 +1,3 @@
-""" Quickstart script for InstaPy usage """
 # imports
 from instapy import InstaPy
 from instapy import smart_run
@@ -6,6 +5,17 @@ from instapy import smart_run
 # login credentials
 insta_username = ''
 insta_password = ''
+
+comments = ['Nice shot! @{}',
+        'I love your profile! @{}',
+        'Your feed is an inspiration :thumbsup:',
+        'Just incredible :open_mouth:',
+        'What camera did you use @{}?',
+        'Love your posts @{}',
+        'Looks awesome @{}',
+        'Getting inspired by you @{}',
+        ':raised_hands: Yes!',
+        'I can feel your passion @{} :muscle:']
 
 # get an InstaPy session!
 # set headless_browser=True to run InstaPy in the background
@@ -22,5 +32,6 @@ with smart_run(session):
   session.like_by_tags(["natgeo"], amount=10)
 
   # Joining Engagement Pods
+  session.set_do_comment(enabled=True, percentage=35)
+  session.set_comments(comments)
   session.join_pods()
-
