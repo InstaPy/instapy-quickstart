@@ -1,3 +1,4 @@
+#!/bin/bash
 # Simple installation script for Linux
 
 echo "Unix InstaPy Setup"
