@@ -36,7 +36,7 @@ def get_session():
 def follow():
     # Send notification to my Telegram
     requests.get(
-        "https://api.telegram.org/******&text='InstaPy Follower Started @ {}'"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text='InstaPy Follower Started @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
     # get a session!
@@ -73,13 +73,13 @@ def follow():
 
     # Send notification to my Telegram
     requests.get(
-        "https://api.telegram.org/******&text='InstaPy Follower Stopped @ {}'"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text='InstaPy Follower Stopped @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
 
 def unfollow():
     requests.get(
-        "https://api.telegram.org/******/sendMessage?chat_id=*****&text"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>/sendMessage?chat_id=*****&text"
         "='InstaPy Unfollower Started @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
@@ -100,14 +100,14 @@ def unfollow():
             print(traceback.format_exc())
 
     requests.get(
-        "https://api.telegram.org/******/sendMessage?chat_id=*****&text"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text"
         "='InstaPy Unfollower Stopped @ {}'"
         .format(datetime.now().strftime("%H:%M:%S")))
 
 
 def xunfollow():
     requests.get(
-        "https://api.telegram.org/******/sendMessage?chat_id=*****&text"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text"
         "='InstaPy Unfollower WEDNESDAY Started @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
@@ -129,7 +129,7 @@ def xunfollow():
             print(traceback.format_exc())
 
     requests.get(
-        "https://api.telegram.org/******/sendMessage?chat_id=*****&text"
+        "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text"
         "='InstaPy Unfollower WEDNESDAY Stopped @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
 
