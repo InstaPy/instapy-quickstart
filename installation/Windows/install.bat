@@ -1,5 +1,19 @@
 @ECHO OFF
 
+REM[Check for administrator privileges]
+net session >nul 2>&1
+if %errorLevel% == 0 (
+    echo Administrative permissions confirmed
+    echo.
+) else (
+    echo.
+    echo      Administrator privileges not found
+    echo Rerun this file with Administrative privileges
+    echo.
+    pause
+    GOTO :EOF
+)
+
 REM[Checking if python is installed. If not, let the user know and quit.]
 python --version
 if ERRORLEVEL 1 GOTO :pythonNotInstalledExit
