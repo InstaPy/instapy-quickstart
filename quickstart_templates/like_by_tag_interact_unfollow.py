@@ -78,4 +78,4 @@ with smart_run(session):
 
     session.set_do_comment(enabled = True, percentage = 95)
     session.set_comments(photo_comments, media = 'Photo')
-    session.join_pods()
+    session.join_pods(topic='travel')

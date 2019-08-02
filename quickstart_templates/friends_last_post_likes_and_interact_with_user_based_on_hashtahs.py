@@ -213,4 +213,4 @@ with smart_run(bot):
 
     """ Joining Engagement Pods...
     """
-    bot.join_pods()
+    bot.join_pods(topic='food')

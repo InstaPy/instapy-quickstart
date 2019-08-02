@@ -86,4 +86,4 @@ with smart_run(session):
 
     """ Joining Engagement Pods...
     """
-    session.join_pods()
+    session.join_pods(topic='sports')
