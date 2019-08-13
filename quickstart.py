@@ -34,4 +34,4 @@ with smart_run(session):
   # Joining Engagement Pods
   session.set_do_comment(enabled=True, percentage=35)
   session.set_comments(comments)
-  session.join_pods()
+  session.join_pods(topic='sports', engagement_mode='heavy')
