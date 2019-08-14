@@ -54,7 +54,7 @@ with smart_run(session):
 
     """ Joining Engagement Pods...
     """
-    session.join_pods(topic='entertainment', engagement_mode='light')
+    session.join_pods(topic='entertainment', engagement_mode='no_comments')
 """
 -- REVIEWS --
 
