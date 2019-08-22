@@ -80,8 +80,8 @@ with smart_run(session):
                              u'you think of my recent photo?'],
                          media='Photo')
     session.set_do_like(True, percentage=70)
-    session.set_delimit_liking(enabled=True, max=100, min=0)
-    session.set_delimit_commenting(enabled=True, max=20, min=0)
+    session.set_delimit_liking(enabled=True, max_likes=100, min_likes=0)
+    session.set_delimit_commenting(enabled=True, max_comments=20, min_comments=0)
     session.set_relationship_bounds(enabled=True,
                                     potency_ratio=None,
                                     delimit_by_numbers=True,
@@ -94,18 +94,22 @@ with smart_run(session):
                                  sleep_after=["likes", "follows"],
                                  sleepyhead=True, stochastic_flow=True,
                                  notify_me=True,
-                                 peak_likes=(100, 1000),
-                                 peak_comments=(21, 250),
-                                 peak_follows=(200, None))
+                                 peak_likes_hourly=100,
+                                 peak_likes_daily=1000,
+                                 peak_comments_daily=250,
+                                 peak_follows_hourly=200,
+                                 peak_follows_daily=None)
 
     session.set_user_interact(amount=1, randomize=False, percentage=40)
 
     # activity
     session.like_by_tags(my_hashtags, amount=60, media=None)
-    session.unfollow_users(amount=500, InstapyFollowed=(True, "nonfollowers"),
+    session.unfollow_users(amount=500, instapy_followed_enabled=True,
+                            instapy_followed_param="nonfollowers",
                            style="FIFO",
                            unfollow_after=12 * 60 * 60, sleep_delay=501)
-    session.unfollow_users(amount=500, InstapyFollowed=(True, "all"),
+    session.unfollow_users(amount=500, instapy_followed_enabled=True,
+                            instapy_followed_param="all",
                            style="FIFO", unfollow_after=24 * 60 * 60,
                            sleep_delay=501)
 
