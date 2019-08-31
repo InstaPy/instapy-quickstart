@@ -87,7 +87,7 @@ with smart_run(session):
 
     """ Joining Engagement Pods...
     """
-    session.join_pods(topic='travel', engagement_mode='light')
+    session.join_pods(topic='travel', engagement_mode='no_comments')
 
 """
 EXTRA NOTES:
