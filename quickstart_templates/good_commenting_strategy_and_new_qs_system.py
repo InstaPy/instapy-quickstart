@@ -115,4 +115,4 @@ with smart_run(session):
 
     """ Joining Engagement Pods...
     """
-    session.join_pods(topic='sports')
+    session.join_pods(topic='sports', engagement_mode='no_comments')
