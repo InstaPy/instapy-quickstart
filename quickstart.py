@@ -3,19 +3,19 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
-insta_username = ''
-insta_password = ''
+insta_username = tcf.438
+insta_password = Sevilla1+
 
 comments = ['Nice shot! @{}',
-        'I love your profile! @{}',
+        'I love your profile! @{tcf.438}',
         'Your feed is an inspiration :thumbsup:',
         'Just incredible :open_mouth:',
-        'What camera did you use @{}?',
-        'Love your posts @{}',
-        'Looks awesome @{}',
-        'Getting inspired by you @{}',
+        'What camera did you use @{tcf.428}?',
+        'Love your posts @{tcf.438}',
+        'Looks awesome @{tcf.438}',
+        'Getting inspired by you @{tcf.438}',
         ':raised_hands: Yes!',
-        'I can feel your passion @{} :muscle:']
+        'I can feel your passion @{tcf.438} :muscle:']
 
 # get an InstaPy session!
 # set headless_browser=True to run InstaPy in the background
