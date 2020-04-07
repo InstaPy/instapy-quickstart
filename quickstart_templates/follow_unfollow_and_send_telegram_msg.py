@@ -19,8 +19,8 @@ import requests
 from instapy import InstaPy
 from instapy import smart_run
 
-insta_username = ''
-insta_password = ''
+insta_username = 'subbotina_cos'
+insta_password = 'subbotinale'
 
 
 def get_session():
@@ -34,7 +34,7 @@ def get_session():
 
 
 def follow():
-    # Send notification to my Telegram
+    # Send notification to my Telegram Barnaul
     requests.get(
         "https://api.telegram.org/bot<INSERT_BOT_API_KEY_HERE/sendMessage?chat_id=<>INSERT_CHATID_HERE>&text='InstaPy Follower Started @ {}'"
             .format(datetime.now().strftime("%H:%M:%S")))
