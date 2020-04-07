@@ -3,8 +3,8 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # login credentials
-insta_username = ''
-insta_password = ''
+insta_username = subbotinapp
+insta_password = subbotinal
 
 comments = ['Nice shot! @{}',
         'I love your profile! @{}',
