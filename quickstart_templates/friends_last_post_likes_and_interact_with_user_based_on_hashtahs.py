@@ -1,6 +1,6 @@
 """
 Based in @jeremycjang and @boldestfortune
-This config is ment to run with docker-compose inside a folder call z_{user}
+This config is meant to run with docker-compose inside a folder call z_{user}
 (Added to gitignore)
 Folder content:
   - data.yaml
