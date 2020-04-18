@@ -128,10 +128,12 @@ with smart_run(bot):
                              sleepyhead=True,
                              stochastic_flow=True,
                              notify_me=True,
-                             peak_likes=(57, 585),
-                             peak_follows=(48, None),
-                             peak_unfollows=(35, 402),
-                             peak_server_calls=(500, None))
+                             peak_follows_hourly=48,
+                             peak_follows_daily=None,
+                             peak_unfollows_hourly=35,
+                             peak_unfollows_hourly=403,
+                             peak_server_calls_hourly=None,
+                             peak_server_calls_daily=4700)
     """
     Setting smooth behavior
     """
