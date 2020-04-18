@@ -128,7 +128,8 @@ with smart_run(bot):
                              sleepyhead=True,
                              stochastic_flow=True,
                              notify_me=True,
-                             peak_likes=(57, 585),
+                             peak_likes_hourly=106, 
+                             peak_likes_daily=585,
                              peak_follows=(48, None),
                              peak_unfollows=(35, 402),
                              peak_server_calls=(500, None))
