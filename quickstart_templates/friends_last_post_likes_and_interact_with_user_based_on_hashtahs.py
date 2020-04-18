@@ -172,7 +172,7 @@ with smart_run(bot):
     bot.set_do_like(enabled=True,
                     percentage=100)
     bot.set_delimit_liking(enabled=True,
-                           min=40)
+                           min_likes=40)
     if data['do_comments']:
         bot.set_comments(comments)
         bot.set_do_comment(enabled=True,
