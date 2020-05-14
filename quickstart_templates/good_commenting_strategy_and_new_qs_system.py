@@ -80,8 +80,8 @@ with smart_run(session):
                              u'you think of my recent photo?'],
                          media='Photo')
     session.set_do_like(True, percentage=70)
-    session.set_delimit_liking(enabled=True, max=100, min=0)
-    session.set_delimit_commenting(enabled=True, max=20, min=0)
+    session.set_delimit_liking(enabled=True, max_likes=100, min_likes=0)
+    session.set_delimit_commenting(enabled=True, max_comments=20, min_comments=0)
     session.set_relationship_bounds(enabled=True,
                                     potency_ratio=None,
                                     delimit_by_numbers=True,
@@ -94,9 +94,11 @@ with smart_run(session):
                                  sleep_after=["likes", "follows"],
                                  sleepyhead=True, stochastic_flow=True,
                                  notify_me=True,
-                                 peak_likes=(100, 1000),
-                                 peak_comments=(21, 250),
-                                 peak_follows=(200, None))
+                                 peak_likes_hourly=100,
+                                 peak_likes_daily=1000,
+                                 peak_comments_hourly=21,
+                                 peak_comments_daily=250,
+                                 peak_follows_hourly=200)
 
     session.set_user_interact(amount=1, randomize=False, percentage=40)
 
