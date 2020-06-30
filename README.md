@@ -67,3 +67,4 @@ If you should encounter any problem with the installation, please use the main r
 
 
 ###### Have fun & stay responsible!
+[![Run on Repl.it](https://repl.it/badge/github/InstaPy/instapy-quickstart)](https://repl.it/github/InstaPy/instapy-quickstart)

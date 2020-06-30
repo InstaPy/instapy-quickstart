@@ -1,6 +1,6 @@
 """
 Based in @jeremycjang and @boldestfortune
-This config is ment to run with docker-compose inside a folder call z_{user}
+This config is meant to run with docker-compose inside a folder call z_{user}
 (Added to gitignore)
 Folder content:
   - data.yaml
@@ -128,10 +128,14 @@ with smart_run(bot):
                              sleepyhead=True,
                              stochastic_flow=True,
                              notify_me=True,
-                             peak_likes=(57, 585),
-                             peak_follows=(48, None),
-                             peak_unfollows=(35, 402),
-                             peak_server_calls=(500, None))
+                             peak_likes_hourly=106, 
+                             peak_likes_daily=585,
+                             peak_follows_hourly=48,
+                             peak_follows_daily=None,
+                             peak_unfollows_hourly=35,
+                             peak_unfollows_daily=403,
+                             peak_server_calls_hourly=None,
+                             peak_server_calls_daily=4700)
     """
     Setting smooth behavior
     """
@@ -172,7 +176,7 @@ with smart_run(bot):
     bot.set_do_like(enabled=True,
                     percentage=100)
     bot.set_delimit_liking(enabled=True,
-                           min=40)
+                           min_likes=40)
     if data['do_comments']:
         bot.set_comments(comments)
         bot.set_do_comment(enabled=True,

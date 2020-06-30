@@ -78,9 +78,9 @@ with smart_run(session):
                              u'Great capture!! :smiley: :thumbsup: What do '
                              u'you think of my recent photo?'],
                          media='Photo')
-    session.set_do_like(True, percentage=80)
-    session.set_delimit_liking(enabled=True, max_likes=200, min_likes=0)
-    session.set_delimit_commenting(enabled=True, max_comments=80, min_comments=0)
+    session.set_do_like(True, percentage=70)
+    session.set_delimit_liking(enabled=True, max_likes=100, min_likes=0)
+    session.set_delimit_commenting(enabled=True, max_comments=20, min_comments=0)
     session.set_relationship_bounds(enabled=True,
                                     potency_ratio=None,
                                     delimit_by_numbers=True,
