@@ -13,6 +13,7 @@ else
   sudo apt-get -y upgrade
   sudo apt-get -y install unzip python3-pip python3-dev build-essential libssl-dev libffi-dev xvfb
   sudo pip3 install --upgrade pip
+  pip install clarifai --upgrade
   export LANGUAGE=en_US.UTF-8
   export LANG=en_US.UTF-8
   export LC_ALL=en_US.UTF-8
@@ -25,6 +26,18 @@ else
   sudo apt-get install -y -f
   sudo rm google-chrome-stable_current_amd64.deb
   pushd -0
+  
+  arch=$(uname -m)
+  if [ $arch == "x86_64" ]; then
+    wget https://ftp.mozilla.org/pub/firefox/releases/68.0/linux-x86_64/en-US/firefox-68.0.tar.bz2    
+  else
+    wget https://ftp.mozilla.org/pub/firefox/releases/68.0/linux-i686/en-US/firefox-68.0.tar.bz2    
+  fi
+  
+  tar -xjf firefox-68.0.tar.bz2
+  sudo mv firefox /opt/firefox68
+  sudo ln -s /opt/firefox68/firefox-bin /usr/bin/firefox
+  rm firefox-68.0.tar.bz2
 fi
 echo
 echo "Installing InstaPy..."
