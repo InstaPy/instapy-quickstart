@@ -2,7 +2,7 @@
 
 # Instapy Quickstart
 
-### Installation
+## Installation
 Using this repository, you will be able to install and use InstaPy with only very few steps.
 
 1. Download the zip of this repository by clicking on the green button in the upper right corner `Clone or download`.
@@ -15,7 +15,10 @@ Using this repository, you will be able to install and use InstaPy with only ver
 
 > If you're using one of the template files, make sure to copy and paste them into the same folder as the _quickstart.py_ file is and then rename it to _quickstart.py_ because that is the name of the file that will be chosen once you double click the run script. 
 
-#### Basic quickstart file 
+**InstaPy is being sponsored by the following partner. Please help to support us by taking a look and signing up to a free trial 😊**
+<a href="https://tracking.gitads.io/?repo=InstaPy"> <img src="https://images.gitads.io/InstaPy" alt="GitAds"/> </a>
+
+### Basic quickstart file 
 To get started quickly we've prepared a basic quickstart file in which you only have to edit the username and password, inside the single quotes, to make sure you're all set up.
 After testing your installation by starting InstaPy once, you can go in and use the [documentation](https://github.com/timgrossmann/InstaPy) to configure your personal bot.
 
@@ -56,15 +59,15 @@ with smart_run(session):
 
 ---
 
-#### Already used InstaPy before `pip install instapy`?
+### Already used InstaPy before `pip install instapy`?
 If you've used InstaPy before the update to PyPi that allows installing with `pip install instapy`, you have to move your database and log files into the new workspace directory.   
 [**Check out this very short guide on what to do!**](https://github.com/timgrossmann/InstaPy#migrating-your-data-to-the-workspace-folder)
 
 ---
 
-#### Encountering an issue while installing?
+### Encountering an issue while installing?
 If you should encounter any problem with the installation, please use the main repository [InstaPy](https://github.com/timgrossmann/InstaPy) to report the issue instead of this repository.
 
 
-###### Have fun & stay responsible!
+##### Have fun & stay responsible!
 [![Run on Repl.it](https://repl.it/badge/github/InstaPy/instapy-quickstart)](https://repl.it/github/InstaPy/instapy-quickstart)
