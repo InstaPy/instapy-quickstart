@@ -116,7 +116,7 @@ with smart_run(session):
     """ Unfollow nonfollowers after one day...
     """
     session.unfollow_users(amount=random.randint(75, 100),
-                           InstapyFollowed=(True, "nonfollowers"),
+                           nonFollowers=True,
                            style="FIFO",
                            unfollow_after=24 * 60 * 60, sleep_delay=600)
 
@@ -124,7 +124,8 @@ with smart_run(session):
     following-level clean...
     """
     session.unfollow_users(amount=random.randint(75, 100),
-                           InstapyFollowed=(True, "all"), style="FIFO",
+                           allFollowing=True,
+                           style="FIFO",
                            unfollow_after=168 * 60 * 60, sleep_delay=600)
 
     """ Joining Engagement Pods...
