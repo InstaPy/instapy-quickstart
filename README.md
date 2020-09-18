@@ -15,8 +15,6 @@ Using this repository, you will be able to install and use InstaPy with only ver
 
 > If you're using one of the template files, make sure to copy and paste them into the same folder as the _quickstart.py_ file is and then rename it to _quickstart.py_ because that is the name of the file that will be chosen once you double click the run script. 
 
-**InstaPy is being sponsored by the following partner. Please help to support us by taking a look and signing up to a free trial 😊**
-<a href="https://tracking.gitads.io/?repo=InstaPy"> <img src="https://images.gitads.io/InstaPy" alt="GitAds"/> </a>
 
 ### Basic quickstart file 
 To get started quickly we've prepared a basic quickstart file in which you only have to edit the username and password, inside the single quotes, to make sure you're all set up.
