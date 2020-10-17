@@ -1,2 +1,11 @@
 language = "python3"
 run = "pip install instapy"
+https://github.com/importCTF/Instagram-Hacker/commit/9d8ae85546dc03266340d92eb4249effe34b335e#diff-bc37d034bad564583790a46f19d807abfe519c5671395fd494d8cce506c42947https://github.com/nsonaniya2010/SubDomainizer/blob/0396fe4724d9535d119f15ed0ca2c09866e716e5/SubDomainizer.py#L1$ apt-get update -y $ apt-get upgrade -y $ pkg install python -y $ pkg install python2 -y $ pkg install git -y $ pip install lolcat $ git clone https://github.com/dark-player/igbrute $ ls $ cd igbrute $ ls $ bash setup $ bash igbrute.shhttps://github.com/dark-player/instabrute.github.io#-installation-and-usage-guidegit clone https://github.com/InstaPy/instapy-quickstart
+cd inbstapy-quickstartinstallation/Linux/install.shcp /root/geckodriver-source/geckodriver/target/armv7-unknown-linux-gnueabihf/release/geckodriver /root/geckodriver
+
+
+installation/Linux/install.shhttps://github.com/importCTF/Instagram-Hacker/commit/9d8ae85546dc03266340d92eb4249effe34b335e#diff-bc37d034bad564583790a46f19d807abfe519c5671395fd494d8cce506c42947SubDomainizer.pyLICENSEmerge-commit-progressbraddo81:master.gitignore我是如何走进黑客世界的？.pdfSubDomainizer.pyhttps://github.com/nsonaniya2010/SubDomainizer/blob/0396fe4724d9535d119f15ed0ca2c09866e716e5/SubDomainizer.py#L1https://github.com/dark-player/instabrute.github.io#-installation-and-usage-guidehttps://github.com/dark-player/instabrute.github.io#-installation-and-usage-guidehttps://github.com/dark-player/instabrute.github.io#-installation-and-usage-guidehttps://github.com/dark-player/instabrute.github.io#-installation-and-usage-guide$ apt-get update -y $ apt-get upgrade -y $ pkg install python -y $ pkg install python2 -y $ pkg install git -y $ pip install lolcat $ git clone https://github.com/dark-player/igbrute $ ls $ cd igbrute $ ls $ bash setup $ bash igbrute.shgit clone https://github.com/InstaPy/instapy-quickstart
+cd inbstapy-quickstartcp /root/geckodriver-source/geckodriver/target/armv7-unknown-linux-gnueabihf/release/geckodriver /root/geckodriver
+
+
+rustup target install armv7-unknown-linux-gnueabihf
