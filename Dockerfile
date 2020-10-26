@@ -19,9 +19,9 @@ RUN apt-get update && \
     apt-get -y install firefox && \
     pip3 install instapy 
 
-COPY instapy-quickstart-master/ instapy-quickstart-master
+COPY instapy-quickstart/ instapy-quickstart
 
-WORKDIR instapy-quickstart-master    
+WORKDIR instapy-quickstart    
     
 COPY webdriverdownloader.py /usr/local/lib/python3.5/dist-packages/webdriverdownloader/webdriverdownloader.py
 
