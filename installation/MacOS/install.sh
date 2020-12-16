@@ -1,7 +1,13 @@
-# Simple installation script for MacOS
+#!/bin/bash
+# Simple installation script for macOS
+
+echo "macOS InstaPy Setup"
+echo "================================"
+
+kernel=$(uname)
 
 if [ $kernel != "Darwin" ]; then
-  echo "Non MacOS System detected, please use the right installtion file for your system"
+  echo "Non macOS System detected, please use the right installtion file for your system"
 else
     DONE_STEPS=0
 
@@ -11,11 +17,12 @@ else
         DONE_STEPS=`expr $DONE_STEPS + 1`
     else
         echo "Please install the latest version of Python from https://www.python.org/downloads/"
-        echo 
+        echo
         echo "Sorry for the inconveniences"
+        read -p "Press any key to continue..." key
     fi
 
-    echo "===================="
+    echo "================================"
 
     # Check if pip is installed
     if command -v pip &>/dev/null; then
@@ -35,47 +42,57 @@ else
             echo "Pip has been successfilly installed"
             DONE_STEPS=`expr $DONE_STEPS + 1`
         else
-            echo "Pip could not be installed, please manually install pip using this resource: https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macos-or-os-x"
-            echo 
+            echo "Pip could not be installed, please manually install pip using this resource: https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macOS-or-os-x"
+            echo
             echo "Sorry for the inconveniences"
         fi
     fi
 
-    echo "===================="
+    echo "================================"
 
-    # Check if Chrome is installed at default location
-    CHROMEPATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-    if [ -x "$CHROMEPATH" ]; then
-        echo "Chrome is installed"
+    # Check if Firefox is installed at default location
+    FIREFOXPATH="/Applications/Firefox.app/Contents/MacOS/firefox"
+    if [ -x "$FIREFOXPATH" ]; then
+        echo "Firefox is installed"
         DONE_STEPS=`expr $DONE_STEPS + 1`
     else
-        echo "Please make sure that Chrome is installed. If not, please install the latest version of Chrome from https://www.google.com/chrome/"
-        echo 
+        echo "Please make sure that Firefox is installed. If not, please install the latest version of Firefox from https://www.mozilla.org/es-ES/firefox/new/"
+        echo
         echo "Sorry for the inconveniences"
     fi
 
-    echo "===================="
+    echo "================================"
 
     # Checking if InstaPy can be installed and installing InstaPy
     if [ $DONE_STEPS = 3 ]; then
+        echo "Create a virtual environment..."
+        echo "================================"
+
+        python -m venv $HOME/InstaPy/venv
+        . $HOME/InstaPy/venv/bin/activate
+
         echo "Installing InstaPy..."
+        echo "================================"
+
+        pip install --upgrade pip wheel
         pip install instapy
-        
-        echo "===================="
-        
+
+        echo "================================"
+
         # Checking if it was installed
-        PIP_INSTALLS="$(pip list)"
-        if [[ $PIP_INSTALLS = *"instapy"* ]]; then
+        PIP_INSTALLS=$(pip list)
+        if [[ $PIP_INSTALLS == *"instapy"* ]]; then
             echo "Successfully installed InstaPy!"
+            read -p "Press any key to continue..." key
         else
             echo "There was a problem installing InstaPy, please copy the error message and create an issue here: https://github.com/InstaPy/instapy-quickstart/issues"
             echo
             echo "You can also manually install InstaPy with this guide: https://github.com/timgrossmann/InstaPy"
-            echo 
+            echo
             echo "Sorry for the inconveniences"
         fi
-        
+
     else
-        echo "Error! - Please double check the installation of Python, pip, and Chrome \nSorry for the inconveniences"
+        echo "Error! - Please double check the installation of Python, pip, and Firefox \nSorry for the inconveniences"
     fi
 fi

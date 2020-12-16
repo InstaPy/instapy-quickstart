@@ -11,7 +11,7 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # get a session!
-session = InstaPy(username='', password='')
+session = InstaPy(username="", password="")
 
 # let's go! :>
 with smart_run(session):
@@ -37,20 +37,22 @@ with smart_run(session):
     # amount=8000, randomize=False, interact=True)
     # session.unfollow_users(amount=7500, nonFollowers=True, style="RANDOM",
     # unfollow_after=42*60*60, sleep_delay=3)
-    session.like_by_tags(['???'], amount=8000)
+    session.like_by_tags(["???"], amount=8000)
 
     """ Joining Engagement Pods...
     """
-    photo_comments = ['Nice shot! @{}',
-        'I love your profile! @{}',
-        'Your feed is an inspiration :thumbsup:',
-        'Just incredible :open_mouth:',
-        'What camera did you use @{}?',
-        'Love your posts @{}',
-        'Looks awesome @{}',
-        'Getting inspired by you @{}',
-        ':raised_hands: Yes!',
-        'I can feel your passion @{} :muscle:']
-    session.set_do_comment(enabled = True, percentage = 95)
-    session.set_comments(photo_comments, media = 'Photo')
-    session.join_pods(topic='food')
+    photo_comments = [
+        "Nice shot! @{}",
+        "I love your profile! @{}",
+        "Your feed is an inspiration :thumbsup:",
+        "Just incredible :open_mouth:",
+        "What camera did you use @{}?",
+        "Love your posts @{}",
+        "Looks awesome @{}",
+        "Getting inspired by you @{}",
+        ":raised_hands: Yes!",
+        "I can feel your passion @{} :muscle:",
+    ]
+    session.set_do_comment(enabled=True, percentage=95)
+    session.set_comments(photo_comments, media="Photo")
+    session.join_pods(topic="food")

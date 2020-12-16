@@ -10,33 +10,57 @@ from instapy import InstaPy
 from instapy import smart_run
 
 # get a session!
-session = InstaPy(username='', password='')
+session = InstaPy(username="", password="")
 
 # let's go! :>
 with smart_run(session):
     # settings
-    session.set_relationship_bounds(enabled=False,
-                                    potency_ratio=-1.21,
-                                    delimit_by_numbers=True,
-                                    max_followers=4590,
-                                    max_following=5555,
-                                    min_followers=45,
-                                    min_following=77)
+    session.set_relationship_bounds(
+        enabled=False,
+        potency_ratio=-1.21,
+        delimit_by_numbers=True,
+        max_followers=4590,
+        max_following=5555,
+        min_followers=45,
+        min_following=77,
+    )
     session.set_do_comment(True, percentage=50)
-    session.set_comments(['aMazing!', 'So cool!!', 'Nice!', 'wow looks nice!',
-                        'Just incredible :open_mouth:',
-                        'What camera did you use @{}?',
-                        'Love your posts @{}',
-                        'Looks awesome @{}',
-                        'Getting inspired by you @{}',
-                          'this is awesome!'])
+    session.set_comments(
+        [
+            "aMazing!",
+            "So cool!!",
+            "Nice!",
+            "wow looks nice!",
+            "Just incredible :open_mouth:",
+            "What camera did you use @{}?",
+            "Love your posts @{}",
+            "Looks awesome @{}",
+            "Getting inspired by you @{}",
+            "this is awesome!",
+        ]
+    )
 
     # activity
     session.like_by_tags(
-        ['xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx', 'xxx',
-         'xxx', 'xxx', 'xxx'],
-        amount=8, skip_top_posts=True)
+        [
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+            "xxx",
+        ],
+        amount=8,
+        skip_top_posts=True,
+    )
 
     """ Joining Engagement Pods...
     """
-    session.join_pods(topic='entertainment', engagement_mode='light')
+    session.join_pods(topic="entertainment", engagement_mode="light")
