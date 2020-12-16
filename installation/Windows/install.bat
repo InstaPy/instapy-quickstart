@@ -2,84 +2,92 @@
 
 REM[Check for administrator privileges]
 net session >nul 2>&1
-if %errorLevel% == 0 (
-    echo Administrative permissions confirmed
-    echo.
+IF %errorLevel% == 0 (
+    ECHO Administrative permissions confirmed
+    ECHO.
 ) else (
-    echo.
-    echo      Administrator privileges not found
-    echo Rerun this file with Administrative privileges
-    echo.
-    pause
+    ECHO.
+    ECHO      Administrator privileges not found
+    ECHO Rerun this file with Administrative privileges
+    ECHO.
+    PAUSE
     GOTO :EOF
 )
 
 REM[Checking if python is installed. If not, let the user know and quit.]
 python --version
-if ERRORLEVEL 1 GOTO :pythonNotInstalledExit
-if not ERRORLEVEL 1 GOTO :pythonInstalled
+IF ERRORLEVEL 1 GOTO :pythonNotInstalledExit
+IF NOT ERRORLEVEL 1 GOTO :pythonInstalled
 
 :pythonInstalled
-echo python installed
+ECHO python installed
 
 REM[Checking if pip is installed, If not, install it.]
 pip --version
-if ERRORLEVEL 1 GOTO :errorNoPip
-if not ERRORLEVEL 1 GOTO :pipInstalled
+IF ERRORLEVEL 1 GOTO :errorNoPip
+IF NOT ERRORLEVEL 1 GOTO :pipInstalled
 
 :errorNoPip
-echo Error: Pip not installed, installing now
+ECHO Error: Pip not installed, installing now
 REM[The following two lines download and install pip.]
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
 
 :pipInstalled
-echo pip installed
+ECHO pip installed
 
-REM[Checking for chrome in the program file x86 version of the chrome standard directory]
-cd "C:\Program Files (x86)\Google\Chrome\Application"
-if ERRORLEVEL 1 GOTO :checkChromeV2
-if not ERRORLEVEL 1 echo directory found.. checking for chrome
-if EXIST "chrome.exe" GOTO :chromeInstalled
-if not EXIST "chrome.exe" GOTO :chromeNotInstalledExit
+REM[Checking for Firefox in the program file x86 version of the Firefox standard directory]
+CD "C:\Program Files (x86)\Mozilla Firefox"
+IF ERRORLEVEL 1 GOTO :checkFirefoxV2
+IF NOT ERRORLEVEL 1 ECHO Directory found... checking for Firefox x86
+IF EXIST "firefox.exe" GOTO :firefoxInstalled
+IF NOT EXIST "firefox.exe" GOTO :firefoxNotInstalledExit
 
-REM[Checking for chrome in the program files version of the chrome standard directory]
-:checkChromeV2
-cd "C:\Program Files\Google\Chrome\Application"
-if ERRORLEVEL 1 GOTO :chromeNotInstalledExit
-if not ERRORLEVEL 1 echo directory found.. checking for chrome
-if EXIST "chrome.exe" GOTO :chromeInstalled
-if not EXIST "chrome.exe" GOTO :chromeNotInstalledExit
+REM[Checking for Firefox in the program files version of the Firefox standard Directory]
+:checkFirefoxV2
+CD "C:\Program Files\Mozilla Firefox"
+IF ERRORLEVEL 1 GOTO :firefoxNotInstalledExit
+IF NOT ERRORLEVEL 1 ECHO Directory found... checking for Firefox x64
+IF EXIST "firefox.exe" GOTO :firefoxInstalled
+IF NOT EXIST "firefox.exe" GOTO :firefoxNotInstalledExit
 
-:chromeInstalled
-echo chrome installed
+:firefoxInstalled
+ECHO Firefox installed
 
+REM[Loading Virtual environment]
+python -m venv %HOMEDRIVE%%HOMEPATH%\InstaPy\venv
+
+CALL %HOMEDRIVE%%HOMEPATH%\InstaPy\venv\Scripts\activate.bat
+python --version
+pip install --upgrade pip wheel
 pip install instapy
-cls
 
-echo BATCH SESSION SUCCESSFUL(PYTHON, PIP, CHROME, AND INSTAPY ALL VERIFIED AND INSTALLED) YOU MAY EXIT NOW
-pause
+ECHO.
+ECHO BATCH SESSION SUCCESSFUL(PYTHON, PIP, FIREFOX, AND INSTAPY ALL VERIFIED AND INSTALLED) YOU MAY EXIT NOW
+ECHO.
+PAUSE
 GOTO :EOF
 
 REM[This goto is used when python is not installed on the users machine.]
 REM[Since it is a vital asset to InstaPy, the script is not allowed to continue until python is verified and installed on the machine]
 :pythonNotInstalledExit
-echo python not installed
-echo you must install python before using InstaPy. please visit https://www.python.org/downloads/ and download the latest version of python 3 for your operating system.
-echo python installed: no
-echo pip installed: unchecked
-echo chrome installed: unchecked
-echo InstaPy installation: incompleted
-pause
+ECHO python not installed
+ECHO you must install python before using InstaPy. please visit https://www.python.org/downloads/ and download the latest version of python 3 for your Operating System.
+ECHO python installed: no
+ECHO pip installed: unchecked
+ECHO Firefox installed: unchecked
+ECHO InstaPy installation: incompleted
+PAUSE
 GOTO :EOF
 
-REM[this is used when chrome is not installed on the users machine.]
-REM[Since it is a vital asset to InstaPy, the script is not allowed to continue until chrome is verified and installed on the machine]
-:chromeNotInstalledExit
-echo chrome not installed
-echo you must install chrome before using InstaPy. please visit https://www.google.com/chrome/ and download the correct version for your operating system.
-echo python installed: yes
-echo pip installed: yes
-echo chrome installed: no
-echo InstaPy installation: incompleted
-pause
+REM[this is used when Firefox is not installed on the users machine.]
+REM[Since it is a vital asset to InstaPy, the script is not allowed to continue until Firefox is verified and installed on the machine]
+:firefoxNotInstalledExit
+ECHO Firefox not installed
+ECHO you must install Firefox before using InstaPy. please visit https://www.mozilla.org/en-EN/firefox/new/ and download the correct version for your Operating System.
+ECHO python installed: yes
+ECHO pip installed: yes
+ECHO Firefox installed: no
+ECHO InstaPy installation: incompleted
+PAUSE
+GOTO :EOF

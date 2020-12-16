@@ -1,7 +1,9 @@
-# Simple update script for MacOS
+#!/bin/bash
+# Simple update script for macOS
 
 echo "Updating InstaPy..."
-echo "===================="
+echo "================================"
+. $HOME/InstaPy/venv/bin/activate
 pip install -U instapy
 clear
 pip show instapy
