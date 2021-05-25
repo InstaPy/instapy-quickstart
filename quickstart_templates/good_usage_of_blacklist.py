@@ -81,7 +81,7 @@ with smart_run(session):
         unfollowed for whatever reason.
     """
     session.set_blacklist(enabled=False, campaign='blacklist')
-    session.unfollow_users(amount=1000, InstapyFollowed=(True, "all"),
+    session.unfollow_users(amount=1000, instapy_followed_enabled=True,
                            style="FIFO", unfollow_after=None,
                            sleep_delay=600)
 
