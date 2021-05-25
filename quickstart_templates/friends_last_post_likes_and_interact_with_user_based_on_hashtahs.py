@@ -128,7 +128,7 @@ with smart_run(bot):
                              sleepyhead=True,
                              stochastic_flow=True,
                              notify_me=True,
-                             peak_likes_hourly=106, 
+                             peak_likes_hourly=106,
                              peak_likes_daily=585,
                              peak_follows_hourly=48,
                              peak_follows_daily=None,
@@ -205,12 +205,13 @@ with smart_run(bot):
         bot.set_blacklist(enabled=False,
                           campaign='blacklist')
         bot.unfollow_users(amount=random.randint(75, 100),
-                           InstapyFollowed=(True, "nonfollowers"),
+                           instapy_followed_enabled=True,
+                           instapy_followed_param="nonfollowers",
                            style="FIFO",
                            unfollow_after=72 * 60 * 60,
                            sleep_delay=600)
         bot.unfollow_users(amount=1000,
-                           InstapyFollowed=(True, "all"),
+                           instapy_followed_enabled=True,
                            style="FIFO",
                            unfollow_after=168 * 60 * 60,
                            sleep_delay=600)

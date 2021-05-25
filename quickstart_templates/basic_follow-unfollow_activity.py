@@ -53,7 +53,8 @@ with smart_run(session):
 
     """ First step of Unfollow action - Unfollow not follower users...
     """
-    session.unfollow_users(amount=500, InstapyFollowed=(True, "nonfollowers"),
+    session.unfollow_users(amount=500, instapy_followed_enabled=True,
+                           instapy_followed_param="nonfollowers",
                            style="FIFO",
                            unfollow_after=12 * 60 * 60, sleep_delay=601)
 
@@ -64,13 +65,14 @@ with smart_run(session):
 
     """ Second step of Unfollow action - Unfollow not follower users...
     """
-    session.unfollow_users(amount=500, InstapyFollowed=(True, "nonfollowers"),
+    session.unfollow_users(amount=500, instapy_followed_enabled=True,
+                           instapy_followed_param="nonfollowers",
                            style="FIFO",
                            unfollow_after=12 * 60 * 60, sleep_delay=601)
 
     """ Clean all followed user - Unfollow all users followed by InstaPy...
     """
-    session.unfollow_users(amount=500, InstapyFollowed=(True, "all"),
+    session.unfollow_users(amount=500, instapy_followed_enabled=True,
                            style="FIFO", unfollow_after=24 * 60 * 60,
                            sleep_delay=601)
 
@@ -90,4 +92,3 @@ with smart_run(session):
     session.set_do_comment(enabled = True, percentage = 95)
     session.set_comments(photo_comments, media = 'Photo')
     session.join_pods(topic='food', engagement_mode='no_comments')
-

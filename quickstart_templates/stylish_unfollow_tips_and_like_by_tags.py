@@ -76,7 +76,8 @@ with smart_run(session):
         One week (168 * 60 * 60)
         Yes, I give a liberal one week time to follow [back] :)
     """
-    session.unfollow_users(amount=25, InstapyFollowed=(True, "nonfollowers"),
+    session.unfollow_users(amount=25, instapy_followed_enabled=True,
+                           instapy_followed_param="nonfollowers",
                            style="RANDOM",
                            unfollow_after=168 * 60 * 60,
                            sleep_delay=600)
